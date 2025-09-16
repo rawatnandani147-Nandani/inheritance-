@@ -1,0 +1,49 @@
+#include <iostream>
+using namespace std;
+class person {
+private:
+    char name[20];
+    int age;
+public:
+    void enter() {
+        cout << "Enter Name: ";
+        cin >> name;
+        cout << "Enter Age: ";
+        cin >> age;
+    }
+
+    void display() {
+        cout << "Name: " << name << endl;
+        cout << "Age: " << age << endl;
+    }
+};
+class student : public person {
+private:
+    int rno;
+    int marks;
+
+public:
+    void get() {
+        cout << "Enter Roll No.: ";
+        cin >> rno;
+        cout << "Enter Marks: ";
+        cin >> marks;
+    }
+    void show() {
+        cout << "Roll No.: " << rno << endl;
+        cout << "Marks: " << marks << endl;
+    }
+};
+
+int main() {
+    cout << "\t\t\tSINGLE INHERITANCE" << endl;
+    cout << "== Accessing through class student ==" << endl;
+
+    student s1;
+    s1.enter();     
+    s1.display();   
+    s1.get();       
+    s1.show();    
+
+    return 0;
+}
